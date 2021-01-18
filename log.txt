@@ -1,0 +1,1 @@
+{"projectName":"asdfe","description":"","install":"","usage":"","contribution":"","test":"","license":"The Unlicense","github":"","email":"asfaes"}

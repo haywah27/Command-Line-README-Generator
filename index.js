@@ -37,7 +37,7 @@ const questions = [
       {
         type: 'list',
         message: 'Which license does this project need?',
-        choices: ['Public Domain', 'Permissive', 'LGPL', 'Copyleft', 'Proprietary'],
+        choices: ['The Unlicense', 'Apache', 'MIT', 'GNU GPLv3'],
         name: 'license',
       },
       {
@@ -52,11 +52,28 @@ const questions = [
       }
 ];
 
+// inquirer.prompt(questions).then(writeToFile);
+
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    
+    fs.writeFile(fileName, data, err =>
+    err ? console.error(err) : console.log('Success! New README generated!'));
+
+}
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+
+    inquirer.prompt(questions).then(
+        answers => {
+            console.log(answers);
+            writeToFile('log.txt', JSON.stringify(answers))
+        }
+
+    )
+    
+}
 
 // Function call to initialize app
 init();
