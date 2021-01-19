@@ -1,7 +1,9 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-const markdown = require('./generateMarkdown')
+const markdown = require('./generateMarkdown');
+
+
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -17,12 +19,12 @@ const questions = [
       },
       {
         type: 'input',
-        message: 'What are the installation instructions for the app?',
+        message: 'What are the steps required to install your project?',
         name: 'install',
       },
       {
         type: 'input',
-        message: 'What is the usage information?',
+        message: 'Provide instructions for how to use the app',
         name: 'usage',
       },
       {
@@ -50,6 +52,11 @@ const questions = [
         type: 'input',
         message: 'What is a good email to reach you at?',
         name: 'email',
+      },
+      {
+        type: 'input',
+        message: 'Provide instructions on how to reach you with additional questions?',
+        name: 'contactInstuct',
       }
 ];
 
@@ -68,7 +75,8 @@ function init() {
     inquirer.prompt(questions).then(
         answers => {
             console.log(answers);
-            writeToFile('log.txt', markdown(answers));
+            markdown.renderBadge(answers.license);
+            writeToFile('log.txt', markdown.markdown(answers));
         }
 
     )
