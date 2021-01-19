@@ -1,6 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
+const markdown = require('./generateMarkdown')
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -52,7 +53,6 @@ const questions = [
       }
 ];
 
-// inquirer.prompt(questions).then(writeToFile);
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
@@ -68,7 +68,7 @@ function init() {
     inquirer.prompt(questions).then(
         answers => {
             console.log(answers);
-            writeToFile('log.txt', JSON.stringify(answers))
+            writeToFile('log.txt', markdown(answers));
         }
 
     )
