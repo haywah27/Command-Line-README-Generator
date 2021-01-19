@@ -2,7 +2,21 @@ module.exports = {
 
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-renderBadge: function renderLicenseBadge(license) {},
+renderBadge: function renderLicenseBadge(license) {
+    // 'The Unlicense', 'Apache', 'MIT', 'GNU GPLv3'
+    if (license === 'The Unlicense'){
+      console.log("you chose unilicense")
+    } else if (license === 'Apache'){
+
+    } else if (license === 'MIT'){
+
+    } else if (license === 'GNU GPLv3'){
+
+    } else {
+      console.log("no license selected")
+    }
+
+},
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
