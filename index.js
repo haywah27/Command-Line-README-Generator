@@ -75,8 +75,8 @@ function init() {
     inquirer.prompt(questions).then(
         answers => {
             console.log(answers);
-            markdown.renderBadge(answers.license);
-            writeToFile('log.txt', markdown.markdown(answers));
+            badge = markdown.renderBadge(answers.license);
+            writeToFile('log.txt', markdown.markdown(answers, badge));
         }
 
     )
