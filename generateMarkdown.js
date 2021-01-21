@@ -1,7 +1,6 @@
 module.exports = {
 
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+// function that returns a license badge based on which license is passed in
 renderBadge: function renderLicenseBadge(license) {
   let licenseBadge = "";
   switch(license){
@@ -32,8 +31,7 @@ renderBadge: function renderLicenseBadge(license) {
 
 },
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
+// function that returns the license link
 renderLink: function renderLicenseLink(license) {
   let licenseLink = "";
   switch(license){
@@ -60,10 +58,10 @@ renderLink: function renderLicenseLink(license) {
   }
 
   return licenseLink;
+
 },
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
+// function that returns the license section of README
 renderSection: function renderLicenseSection(license) {
   let linkLicense = "";
   let licenseSection = "";
@@ -107,9 +105,10 @@ Licensed under the ${linkLicense} license.
   }
 
   return licenseSection;
+
 },
 
-// TODO: Create a function to generate markdown for README
+// function to generate markdown for README
 markdown: function generateMarkdown(data, licenseBadge, licenseLink, licenseSection) {
   return `${licenseBadge + licenseLink}
 # ${data.projectName}
@@ -138,13 +137,10 @@ ${data.contribution}
 ${data.test}
 
 ## Questions 
-* [Link to GitHub](https://github.com/${data.github})
+* Link to [GitHub](https://github.com/${data.github})
 * Email: ${data.email}
 * Contact Instructions: 
-  * ${data.contactInstuct}
-`;
+  * ${data.contactInstuct}`;
 }
-
-
 }
 
