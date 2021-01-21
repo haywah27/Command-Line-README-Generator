@@ -77,7 +77,8 @@ function init() {
             console.log(answers);
             badge = markdown.renderBadge(answers.license);
             badgeLink = markdown.renderLink(answers.license);
-            writeToFile('log.txt', markdown.markdown(answers, badge, badgeLink));
+            licenseSection = markdown.renderSection(answers.license);
+            writeToFile('log.txt', markdown.markdown(answers, badge, badgeLink, licenseSection));
         }
 
     )

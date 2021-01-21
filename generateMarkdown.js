@@ -64,10 +64,53 @@ renderLink: function renderLicenseLink(license) {
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-renderSection: function renderLicenseSection(license) {},
+renderSection: function renderLicenseSection(license) {
+  let linkLicense = "";
+  let licenseSection = "";
+  switch(license){
+    case "The Unlicense":
+      console.log("you chose unilicense");
+      linkLicense = "[The Unlicense](http://unlicense.org/)";
+      licenseSection = `
+## License
+This is free and unencumbered software released into the public domain through the ${linkLicense}
+`;
+      break;
+    case "Apache":
+      console.log("you chose Apache");
+      linkLicense = "[Apache](https://opensource.org/licenses/Apache-2.0)";
+      licenseSection = `
+## License 
+Licensed under the ${linkLicense} license.
+`;
+      break;
+    case "MIT":
+      console.log("you chose MIT");
+      linkLicense = "[MIT](https://opensource.org/licenses/MIT)";
+      licenseSection = `
+## License
+Licensed under the ${linkLicense} license.
+`;
+      break;
+    case "GNU GPLv3":
+      console.log("you chose GNU GPLv3");
+      linkLicense = "[GNU GPLv3](https://www.gnu.org/licenses/gpl-3.0)";
+      licenseSection = `
+## License
+Licensed under the ${linkLicense} license.
+`;
+      break;
+    case "No License":
+      console.log("no license selected");
+      licenseSection = "";
+      break; 
+  }
+
+  return licenseSection;
+},
 
 // TODO: Create a function to generate markdown for README
-markdown: function generateMarkdown(data, licenseBadge, licenseLink) {
+markdown: function generateMarkdown(data, licenseBadge, licenseLink, licenseSection) {
   return `${licenseBadge + licenseLink}
 # ${data.projectName}
 
@@ -87,10 +130,7 @@ ${data.install}
 
 ## Usage
 ${data.usage}
-
-## License
-${data.license}
-
+${licenseSection}
 ## Contributing
 ${data.contribution}
 
