@@ -68,10 +68,10 @@ renderSection: function renderLicenseSection(license) {
   switch(license){
     case "The Unlicense":
       console.log("you chose unilicense");
-      linkLicense = "[Unlicense](http://unlicense.org/)";
+      linkLicense = "[The Unlicense](http://unlicense.org/)";
       licenseSection = `
 ## License
-This is free and unencumbered software released into the public domain through the ${linkLicense}
+This is free and unencumbered software released into the public domain through ${linkLicense}
 `;
       break;
     case "Apache":
@@ -79,7 +79,7 @@ This is free and unencumbered software released into the public domain through t
       linkLicense = "[Apache](https://opensource.org/licenses/Apache-2.0)";
       licenseSection = `
 ## License 
-Licensed under ${linkLicense} license.`;
+Licensed under the ${linkLicense} license.`;
       break;
     case "MIT":
       console.log("you chose MIT");
