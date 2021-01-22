@@ -68,7 +68,7 @@ renderSection: function renderLicenseSection(license) {
   switch(license){
     case "The Unlicense":
       console.log("you chose unilicense");
-      linkLicense = "[The Unlicense](http://unlicense.org/)";
+      linkLicense = "[Unlicense](http://unlicense.org/)";
       licenseSection = `
 ## License
 This is free and unencumbered software released into the public domain through the ${linkLicense}
