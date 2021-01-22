@@ -17,7 +17,7 @@ Clone this repo and open an integrated terminal on any file from this repository
 
 ## Usage
 A user needs to access the README questions by invoking the index.js file in an integrated terminal. Using an integrated terminal, input “node index.js” and follow the prompt messages.
-[[!Watch this tutorial!]("./tutorial.png)](https://drive.google.com/file/d/1jpFTixqfSgUBDUg5ImpLKwr_IeDEGYX0/view)
+[![Watch this tutorial!]("./tutorial.png)](https://drive.google.com/file/d/1jpFTixqfSgUBDUg5ImpLKwr_IeDEGYX0/view)
 ### 1. Open integrated terminal <img src="./right-click.png alt="open-int-terminal">
 ### 2. Use input "node index.js" to invoke questions <img src="./int-term.png" alt="node">
 ### 3. Follow prompts <img src="./prompts.png" alt="prompts">
