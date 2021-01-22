@@ -79,8 +79,7 @@ This is free and unencumbered software released into the public domain through t
       linkLicense = "[Apache](https://opensource.org/licenses/Apache-2.0)";
       licenseSection = `
 ## License 
-Licensed under the ${linkLicense} license.
-`;
+Licensed under ${linkLicense} license.`;
       break;
     case "MIT":
       console.log("you chose MIT");
@@ -130,6 +129,7 @@ ${data.install}
 ## Usage
 ${data.usage}
 ${licenseSection}
+
 ## Contributing
 ${data.contribution}
 
