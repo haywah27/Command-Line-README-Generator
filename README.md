@@ -19,7 +19,7 @@ Clone this repo and open an integrated terminal on any file from this repository
 A user needs to access the README questions by invoking the index.js file in an integrated terminal. Using an integrated terminal, input “node index.js” and follow the prompt messages.
 
 ## License
-This is free and unencumbered software released into the public domain through the [The Unlicense](http://unlicense.org/)
+This is free and unencumbered software released into the public domain through [The Unlicense](http://unlicense.org/)
 
 ## Contributing
 Pull requests are the best way to propose changes to the codebase (we use [GitHub Flow](https://guides.github.com/introduction/flow/index.html)). We actively welcome your pull requests:
